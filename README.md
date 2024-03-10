@@ -32,6 +32,10 @@ pip install -r requirements.txt
 
 #### Finetuned
 
+We use NLVR2's train split to finetune the models, and then evaluate on MaRVL and NLVR2 dev split.
+
+UNITERs: We evaluate xUNITER and mUNITER, and instructions on how to reproduce the results are provided in `uniters/READEME.md`.
+
 ### Interventions
 
 <img src="images/interventions.png"
