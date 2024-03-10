@@ -40,7 +40,7 @@ val_annotations_jsonpath: Multilingual_Visual_Reasoning/data/en/annotations_json
 
 2. Take xUNITER as an example. Go to `uniters/experiments/ctrl_xuniter/nlvr2/train.sh`: modify `PRETRAINED` to be the path to the pretrained xUNITER model downloaded from ERDA; modify `OUTPUT_DIR` and `LOGGING_DIR` to be where you want to store outputs and logs. Outputs will be around 20GB.
 
-```shell
+```bash
 PRETRAINED=/uniters/pretrained/${MODEL}/pytorch_model_9.bin
 OUTPUT_DIR=/uniters/results/${MODEL}/NLVR2/train
 LOGGING_DIR=/logs/uniters/${MODEL_CONFIG}
