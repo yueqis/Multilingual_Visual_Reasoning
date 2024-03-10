@@ -34,7 +34,7 @@ pip install -r requirements.txt
 
 We use NLVR2's train split to finetune the models, and then evaluate on MaRVL and NLVR2 dev split.
 
-UNITERs: We evaluate xUNITER and mUNITER, and instructions on how to reproduce the results are provided in `uniters/READEME.md`.
+UNITERs: We evaluate xUNITER and mUNITER, and instructions on how to reproduce the results are provided in [uniters/READEME.md](https://github.com/yueqis/Multilingual_Visual_Reasoning/blob/main/uniters/README.md).
 
 ### Interventions
 
