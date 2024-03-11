@@ -15,14 +15,9 @@ Analyzing the failures of these models, we find that multilinguality, complex re
 
 1. Clone this repo.
 
-2. Create a new Conda Environment to manage all packages.
+2. Download the data: all json files are already in `data/`, but you will need to download the images. For NLVR2 images (around 15G), please fill out the [Google Form](https://docs.google.com/forms/d/e/1FAIpQLSdB_OhgmpQULV17kjQ4iitftILbOJjuGgJ2ECmg-HdmkjUSAg/viewform) by the [NLVR2 group](https://lil.nlp.cornell.edu/nlvr/). MaRVL images (around 2.5G) can be downloaded from the [Dataverse portal](https://borealisdata.ca/dataset.xhtml?persistentId=doi:10.5683/SP3/42VZ4P). 
 
-```bash
-conda create -n mvr python=3.10 -y
-conda activate mvr
-pip install --upgrade pip
-pip install -r requirements.txt
-```
+3. 
 
 ## Experiments
 
