@@ -11,7 +11,7 @@
 source ~/miniconda3/etc/profile.d/conda.sh
 conda activate visprog
 
-api_key_neulab=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
+api_key=sk-abcdefgh # put your openai api key here
 
 language=id
 # test_file=/home/yueqis/marvl/data/en/dev.csv
@@ -23,4 +23,4 @@ output_file=/home/yueqis/marvl/gpt4v/marvl/output/translate/${language}2.csv
 start=0
 length=10000
 
-python3 gpt4v.py --test_file $test_file --output_file $output_file --api_key $api_key_neulab --start $start --length $length
+python3 gpt4v.py --test_file $test_file --output_file $output_file --api_key $api_key --start $start --length $length
