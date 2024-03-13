@@ -17,30 +17,52 @@ Analyzing the failures of these models, we find that multilinguality, complex re
 
 2. Download the data: all json files are already in `data/`, but you will need to download the images. For NLVR2 images (around 15G), please fill out the [Google Form](https://docs.google.com/forms/d/e/1FAIpQLSdB_OhgmpQULV17kjQ4iitftILbOJjuGgJ2ECmg-HdmkjUSAg/viewform) by the [NLVR2 group](https://lil.nlp.cornell.edu/nlvr/). MaRVL images (around 2.5G) can be downloaded from the [Dataverse portal](https://borealisdata.ca/dataset.xhtml?persistentId=doi:10.5683/SP3/42VZ4P). 
 
-3. 
+3. Run the experiments: we experiment various models, including GPT-4V, LLaVA, mBLIP, CCLM, UNITERs, and ViLT. Each model requires different environment, so we include a `README.md` file for each model in its directory, indicating how to reproduce the experiments. 
 
 ## Experiments
+
+Here, we briefly describe all experiments we run. More details can be found in our paper. We first evaluate models' performance on NLVR2 and MaRVL under zero-shot or finetuned settings, and propose three interventions: translate test, visual programming, and reasoning with captions.
 
 ### Evaluation
 
 #### Zero-Shot
 
+In this setting, models are not specifically fine-tuned for the task of visual reasoning. Instead, we use LMM's zero-shot learning abilities by providing them prompts with instructions on how to solve the task. We evaluate the following models:
+
+GPT-4V: Instructions on how to reproduce the results are provided in [gpt4v/READEME.md](https://github.com/yueqis/Multilingual_Visual_Reasoning/blob/main/gpt4v/README.md).
+
+LLaVA: Instructions on how to reproduce the results are provided in [LLaVA/READEME.md](https://github.com/yueqis/Multilingual_Visual_Reasoning/blob/main/LLaVA/README.md).
+
+mBLIP: Instructions on how to reproduce the results are provided in [mBLIP/READEME.md](https://github.com/yueqis/Multilingual_Visual_Reasoning/blob/main/mBLIP/README.md).
+
 #### Finetuned
 
-We use NLVR2's train split to finetune the models, and then evaluate on MaRVL and NLVR2 dev split.
+In this setting, models are finetuned on the English NLVR2 dataset, and test them on both NLVR2 and MaRVL. We evaluate the following models:
+
+mBLIP: Instructions on how to reproduce the results are provided in [mBLIP/READEME.md](https://github.com/yueqis/Multilingual_Visual_Reasoning/blob/main/mBLIP/README.md).
+
+CCLM: Instructions on how to reproduce the results are provided in [CCLM/READEME.md](https://github.com/yueqis/Multilingual_Visual_Reasoning/blob/main/CCLM/README.md).
 
 UNITERs: We evaluate xUNITER and mUNITER, and instructions on how to reproduce the results are provided in [uniters/READEME.md](https://github.com/yueqis/Multilingual_Visual_Reasoning/blob/main/uniters/README.md).
 
 ### Interventions
+
+We perform three interventions. The pipelines for each can be found in the flow chart below.
 
 <img src="images/interventions.png"
 alt="Intervention Pipelines" width="600"/> 
 
 #### Translate Test
 
-#### VisProg
+Instead of evaluating models on multilingual text, we evaluate models on the MaRVL dataset with multilingual text translated to English using Google translate API.
+
+#### Visual Programming
+
+We use the approach introduced in [VisProg](https://github.com/allenai/visprog), solving multimodal reasoning using LLMs to generate visual programs, that leverage off-the-shelf computer vision models for image processing during inference.
 
 #### Reasoning with Captions
+
+We first caption both images, and use an LLM to reason about the given statement with the two captions, rather than with the two images.
 
 ### Zeno Result Visualization
 
