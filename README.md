@@ -29,11 +29,11 @@ Here, we briefly describe all experiments we run. More details can be found in o
 
 In this setting, models are not specifically fine-tuned for the task of visual reasoning. Instead, we use LMM's zero-shot learning abilities by providing them prompts with instructions on how to solve the task. We evaluate the following models:
 
-GPT-4V: Instructions on how to reproduce the results are provided in [gpt4v/READEME.md](https://github.com/yueqis/Multilingual_Visual_Reasoning/blob/main/gpt4v/README.md).
+GPT-4V: Instructions on how to reproduce the results are provided in [gpt4v/README.md](https://github.com/yueqis/Multilingual_Visual_Reasoning/blob/main/gpt4v/README.md).
 
-LLaVA: Instructions on how to reproduce the results are provided in [LLaVA/READEME.md](https://github.com/yueqis/Multilingual_Visual_Reasoning/blob/main/LLaVA/README.md).
+LLaVA: Instructions on how to reproduce the results are provided in [LLaVA/README.md](https://github.com/yueqis/Multilingual_Visual_Reasoning/blob/main/LLaVA/README.md).
 
-mBLIP: Instructions on how to reproduce the results are provided in [mBLIP/READEME.md](https://github.com/yueqis/Multilingual_Visual_Reasoning/blob/main/mBLIP/README.md).
+mBLIP: Instructions on how to reproduce the results are provided in [mBLIP/README.md](https://github.com/yueqis/Multilingual_Visual_Reasoning/blob/main/mBLIP/README.md).
 
 #### Finetuned
 
